@@ -78,3 +78,20 @@ app.service("authService", function (AuthFactory) {
     return AuthFactory.clear(NameCookies);
   };
 });
+
+
+
+app.factory("checkMsgShow", () =>{
+  var handle = {}
+  handle.checkMsg = checkMsg;
+  function checkMsg(id,msg){
+    return document.getElementById(id).innerHTML = msg;
+  }
+  return handle;
+})
+
+app.service('handleMsgService', function(checkMsgShow){
+  this.handleMsg = (id,msg) =>{
+    return checkMsgShow.checkMsg(id,msg);
+  }
+})
