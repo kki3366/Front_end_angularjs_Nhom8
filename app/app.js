@@ -51,3 +51,10 @@ app.controller("header-footer", function ($scope, authService, $window) {
 });
 
 //for(var i = 0; i < userGlobal.length;i++){console.log(userGlobal[i])}
+
+app.controller('registerCrt', function($scope, studentService){
+  $scope.email;
+  $scope.password;
+  $scope.passwordConfirm;
+  $scope.fullname;
+})

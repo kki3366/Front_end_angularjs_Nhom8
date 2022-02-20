@@ -3,6 +3,7 @@ app.factory("studentFactory", ($http) => {
   var service = {};
   service.GetAll = GetAll;
   service.GetByEmail = GetByEmail;
+  service.CreateAccount = CreateAccount;
   function GetAll() {
     return $http
       .get("http://localhost:3000/students")
@@ -13,6 +14,12 @@ app.factory("studentFactory", ($http) => {
     return $http
       .get("http://localhost:3000/students?email=" + email)
       .then(handleSuccess, handleError("Không kết nối được"));
+  }
+
+  function CreateAccount(){
+    return $http
+    .post("http://localhost:3000/students")
+    .then(handleSuccess, handleError("Không kết nối được"));
   }
 
   function handleSuccess(res) {
@@ -33,6 +40,9 @@ app.service("studentService", function (studentFactory) {
   this.studentsGetByEmail = (email) => {
     return studentFactory.GetByEmail(email);
   };
+  this.studentsCreate = () =>{
+    return studentFactory.CreateAccount();
+  }
 });
 
 app.factory("AuthFactory", ($cookies) => {

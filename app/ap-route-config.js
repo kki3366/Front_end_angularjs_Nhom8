@@ -27,8 +27,15 @@ app.config(function ($stateProvider, $urlRouterProvider) {
   var homeState = {
     name: "home",
     url: "/",
-    templateUrl: "/components/home.html",
+    templateUrl: "/components/home.html"
   };
+
+  var registerState = {
+    name: "Register",
+    url: "/register",
+    templateUrl: "/components/register.html",
+    controller: "registerCrt"
+  }
 
   var courseState = {
     name: "course",
@@ -39,13 +46,13 @@ app.config(function ($stateProvider, $urlRouterProvider) {
   var QnAState = {
     name: "QnA",
     url: "/QnA",
-    templateUrl: "/components/Q&A.html",
+    templateUrl: "/components/Q&A.html"
   };
 
   var contactState = {
     name: "Contact",
     url: "/contact",
-    templateUrl: "/components/contact.html",
+    templateUrl: "/components/contact.html"
   };
   var loGinState = {
     name: "Login",
@@ -54,13 +61,21 @@ app.config(function ($stateProvider, $urlRouterProvider) {
     controller: "loginCrt",
   };
 
+  var rememberPwState ={
+    name: "RememberPassword",
+    url: "/forgotPassword",
+    templateUrl: "/components/RememberPassword.html",
+    controller: "rememberPwCrt",
+  }
+
   $stateProvider.state(homeState);
 
   $stateProvider.state(courseState);
-
+  $stateProvider.state(registerState);
   $stateProvider.state(QnAState);
   $stateProvider.state(contactState);
   $stateProvider.state(loGinState);
+  $stateProvider.state(rememberPwState);
   $urlRouterProvider.otherwise("/");
   // $locationProvider.html5Mode(true)
 });
