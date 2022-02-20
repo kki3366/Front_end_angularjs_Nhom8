@@ -2,6 +2,7 @@
     <div class="login-form">
      <h1 class="text-form-login">Đăng Kí Miễn Phí</h1>
      <form class="loginForm">
+      <span id="Check"></span>
          <div class="mb-3">
            <label for="exampleInputEmail1" class="form-label">Email address</label>
            <input type="email" class="form-control InputProps" id="exampleInputEmail1" aria-describedby="emailHelp" ng-model="email">
@@ -21,7 +22,7 @@
             <input type="text" class="form-control InputProps" id="exampleInputEmail1" aria-describedby="emailHelp" ng-model="fullname">
           </div>
          
-         <button type="submit" class="custom-btn">Đăng kí</button>
+         <button type="submit" class="custom-btn" ng-click="register()">Đăng kí</button>
      </form>
     </div>
      

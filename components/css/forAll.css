@@ -8,6 +8,7 @@
     --color-primary-hover: #5533ff;
     --color-gray: #aaa;
     --color-yellow: #FFD300;
+    --color-red: red;
   }
   /* recall class */
   .InputProps {
@@ -53,3 +54,4 @@
     background-color: var(--cs-pink);
     position: relative;
   }
+

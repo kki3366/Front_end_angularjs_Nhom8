@@ -50,11 +50,28 @@ app.controller("header-footer", function ($scope, authService, $window) {
   };
 });
 
-//for(var i = 0; i < userGlobal.length;i++){console.log(userGlobal[i])}
-
-app.controller('registerCrt', function($scope, studentService){
-  $scope.email;
-  $scope.password;
-  $scope.passwordConfirm;
-  $scope.fullname;
-})
+app.controller("registerCrt", function ($scope, studentService) {
+  $scope.register = function () {
+    $scope.email;
+    $scope.password;
+    $scope.passwordConfirm;
+    $scope.fullname;
+    var userRegister = {
+      email: $scope.email,
+      password: $scope.password,
+      fullname: $scope.fullname,
+    };
+    if ($scope.password == $scope.passwordConfirm) {
+      studentService.studentsCreate(userRegister).then(function (data) {
+        if (data) {
+          alert("okay");
+        }
+      });
+    } else {
+      $scope.password = "";
+      $scope.passwordConfirm = "";
+      document.getElementById("Check").innerHTML =
+        "Mật khẩu xác nhận không khớp";
+    }
+  };
+});

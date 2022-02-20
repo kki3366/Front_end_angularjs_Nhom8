@@ -16,9 +16,9 @@ app.factory("studentFactory", ($http) => {
       .then(handleSuccess, handleError("Không kết nối được"));
   }
 
-  function CreateAccount(){
+  function CreateAccount(user){
     return $http
-    .post("http://localhost:3000/students")
+    .post("http://localhost:3000/students",user)
     .then(handleSuccess, handleError("Không kết nối được"));
   }
 
@@ -40,8 +40,8 @@ app.service("studentService", function (studentFactory) {
   this.studentsGetByEmail = (email) => {
     return studentFactory.GetByEmail(email);
   };
-  this.studentsCreate = () =>{
-    return studentFactory.CreateAccount();
+  this.studentsCreate = (user) =>{
+    return studentFactory.CreateAccount(user);
   }
 });
 
