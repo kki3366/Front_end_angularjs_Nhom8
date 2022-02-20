@@ -1,0 +1,16 @@
+
+  
+  
+  .scrolled {
+      background-color: #fff !important;
+      transition: background-color 200ms linear;
+      border-bottom: 1px solid var(--text-color);
+    }
+  
+.box766{
+  margin-left: auto;
+    margin-right: auto;
+  margin-top: 0px;
+  width: 22rem;
+    max-width: calc(100% - 2rem);
+}

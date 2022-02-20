@@ -1,0 +1,49 @@
+<header ng-controller="header-footer">
+      <div ng-include="navbar"></div>
+    </header>
+    <main ng-view></main>
+    <footer ng-controller="header-footer">
+      <div ng-include="footer"></div>
+    </footer>
+
+
+
+
+    class abc{
+      public void tong(int a, int b){
+      return a+b;
+    }
+
+    main{
+      abc ab = new abc();
+      sout(ab.tong(3,2));
+    }
+    }
+
+
+
+    drop down 
+
+
+    <div class="dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Dropdown
+          </a>
+          <ul
+            class="dropdown-menu dropdown-menu-dark"
+            aria-labelledby="dropdownMenuButton2"
+          >
+            <li><a class="dropdown-item active" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><hr class="dropdown-divider" /></li>
+            <li><a class="dropdown-item" href="#">Separated link</a></li>
+          </ul>
+        </div>
