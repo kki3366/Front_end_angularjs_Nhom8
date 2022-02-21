@@ -68,8 +68,8 @@ app.config(function ($stateProvider, $urlRouterProvider) {
     controller: "rememberPwCrt",
   }
 
-  $stateProvider.state(homeState);
 
+  $stateProvider.state(homeState);
   $stateProvider.state(courseState);
   $stateProvider.state(registerState);
   $stateProvider.state(QnAState);

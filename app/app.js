@@ -59,7 +59,7 @@ app.controller("header-footer", function ($scope, authService, $window) {
 
 app.controller(
   "registerCrt",
-  function ($scope, studentService, handleMsgService) {
+  function ($scope, studentService, handleMsgService,$location) {
     $scope.register = function () {
       $scope.email;
       $scope.password;
@@ -83,6 +83,7 @@ app.controller(
         } else {
           if ($scope.password == $scope.passwordConfirm) {
             studentService.studentsCreate(userRegister);
+            $location.path('/Login')
           } else {
             $scope.password = "";
             $scope.passwordConfirm = "";

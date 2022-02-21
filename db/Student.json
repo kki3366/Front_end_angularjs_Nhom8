@@ -13,37 +13,16 @@
       "fullname": "user"
     },
     {
-      "id": 3
-    },
-    {
-      "id": 4
-    },
-    {
-      "id": 5
-    },
-    {
-      "id": 6
-    },
-    {
-      "id": 7
-    },
-    {
       "email": "123@gmail.com",
       "password": "123",
       "fullname": "123",
-      "id": 8
+      "id": 3
     },
     {
-      "email": "zzz@gmail.com",
-      "password": "123",
-      "fullname": "4343",
-      "id": 9
-    },
-    {
-      "email": "2313213123@gmail.com",
-      "password": "123",
+      "email": "abc@gmail.com",
+      "password": "abc",
       "fullname": "123",
-      "id": 10
+      "id": 4
     }
   ]
 }
