@@ -96,3 +96,8 @@ app.controller(
     };
   }
 );
+
+
+app.controller('changePasswordCrt', function(){
+  
+})

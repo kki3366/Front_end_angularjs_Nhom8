@@ -68,6 +68,13 @@ app.config(function ($stateProvider, $urlRouterProvider) {
     controller: "rememberPwCrt",
   }
 
+  var changePasswordState = {
+    name: "changePassword",
+    url: '/changePassword',
+    templateUrl: "/components/changePassword.html",
+    controllerAs: "changePasswordCrt",
+  }
+
 
   $stateProvider.state(homeState);
   $stateProvider.state(courseState);
@@ -76,6 +83,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
   $stateProvider.state(contactState);
   $stateProvider.state(loGinState);
   $stateProvider.state(rememberPwState);
+  $stateProvider.state(changePasswordState);
   $urlRouterProvider.otherwise("/");
   // $locationProvider.html5Mode(true)
 });
